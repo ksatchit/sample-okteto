@@ -1,0 +1,9 @@
+name: hello-world
+services:
+  hello:
+    public: true
+    image: openebs/flux-test:master-a000001
+    ports:
+      - 8080
+
+ 
