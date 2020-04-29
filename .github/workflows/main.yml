@@ -22,3 +22,11 @@ jobs:
       with: 
         build: "true"
         name: "hello-${{ github.event.number }}"
+        
+    - name: comment on PR
+      uses: unsplash/comment-on-pr@v1.2.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        msg: "Review the changes live at: https://hello-ksatchit.cloud.okteto.net/"
+      
